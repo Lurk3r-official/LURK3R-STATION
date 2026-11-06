@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LURK3R STATION | MUSIC STUDIO</title>
+    <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+
+    <header class="music-header">
+        <a href="index.html" class="back-btn">← BACK TO STATION</a>
+        <div class="music-logo">LURK3R <span>MUSIC STUDIO</span></div>
+        <div class="system-status">SYSTEM ONLINE</div>
+    </header>
+
+    <main class="music-container">
+
+        <section class="music-hero">
+            <p class="eyebrow">AUDIO PRODUCTION CENTER</p>
+            <h1>MUSIC <span>STUDIO</span></h1>
+            <p>Create. Engineer. Store. Repeat.</p>
+        </section>
+
+        <section class="studio-grid">
+
+            <article class="studio-card" id="aiGenerator">
+                <span class="card-number">01</span>
+                <h2>AI MUSIC GENERATOR</h2>
+                <p>Access external AI music creation platforms.</p>
+                <button id="openSuno">OPEN SUNO ↗</button>
+            </article>
+
+            <article class="studio-card" id="lyricsStudio">
+                <span class="card-number">02</span>
+                <h2>LYRICS STUDIO</h2>
+                <p>Write, edit and copy your lyrics.</p>
+                <button id="openLyrics">OPEN EDITOR</button>
+            </article>
+
+            <article class="studio-card" id="promptEngineer">
+                <span class="card-number">03</span>
+                <h2>PROMPT ENGINEER</h2>
+                <p>Build detailed prompts for AI music generators.</p>
+                <button id="openPrompt">BUILD PROMPT</button>
+            </article>
+
+            <article class="studio-card" id="musicLibrary">
+                <span class="card-number">04</span>
+                <h2>MUSIC LIBRARY</h2>
+                <p>Store and organize your music projects.</p>
+                <button id="openLibrary">OPEN LIBRARY</button>
+            </article>
+
+        </section>
+
+        <section id="workspace" class="workspace">
+            <p class="workspace-placeholder">
+                SELECT A MODULE TO INITIALIZE WORKSPACE
+            </p>
+        </section>
+
+    </main>
+
+    <script src="js/prompt-data.js"></script>
+<script src="js/music.js"></script>
+</body>
+</html>
