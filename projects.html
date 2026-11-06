@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050508">
+
+    <title>PROJECTS | LURK3R STATION</title>
+
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+    <div class="app-shell">
+
+        <header class="topbar">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">L</span>
+                <span>LURK3R <b>STATION</b></span>
+            </a>
+
+            <a href="index.html" class="back-link">← DASHBOARD</a>
+        </header>
+
+        <main class="main-content">
+
+            <section class="page-heading">
+                <div>
+                    <span class="eyebrow">PERSONAL COMMAND CENTER</span>
+                    <h1>PROJECT<span>S</span></h1>
+                    <p>Manage your operations and track your progress.</p>
+                </div>
+
+                <button id="createProjectBtn" class="primary-btn">
+                    + NEW PROJECT
+                </button>
+            </section>
+
+            <section class="stats-grid">
+
+                <article class="stat-card">
+                    <span>TOTAL PROJECTS</span>
+                    <strong id="totalProjects">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>IN PROGRESS</span>
+                    <strong id="activeProjects">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>COMPLETED</span>
+                    <strong id="completedProjects">0</strong>
+                </article>
+
+            </section>
+
+            <section class="projects-section">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">YOUR WORKSPACE</span>
+                        <h2>PROJECT DATABASE</h2>
+                    </div>
+
+                    <select id="projectFilter">
+                        <option value="all">ALL PROJECTS</option>
+                        <option value="planning">PLANNING</option>
+                        <option value="in-progress">IN PROGRESS</option>
+                        <option value="completed">COMPLETED</option>
+                    </select>
+                </div>
+
+                <div id="projectsList" class="projects-grid">
+                    <div class="empty-state">
+                        <span>◇</span>
+                        <h3>NO PROJECTS FOUND</h3>
+                        <p>Create your first project to initialize your workspace.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            LURK3R STATION <span> // PROJECT MANAGEMENT SYSTEM</span>
+        </footer>
+
+    </div>
+
+    <!-- PROJECT MODAL -->
+    <div id="projectModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div>
+                    <span class="eyebrow">PROJECT CONFIGURATION</span>
+                    <h2 id="modalTitle">NEW PROJECT</h2>
+                </div>
+
+                <button type="button" id="closeModal" class="close-btn">×</button>
+            </div>
+
+            <form id="projectForm">
+
+                <input type="hidden" id="projectId">
+
+                <label for="projectName">PROJECT NAME</label>
+                <input
+                    type="text"
+                    id="projectName"
+                    maxlength="60"
+                    placeholder="Enter project name..."
+                    required
+                >
+
+                <label for="projectDescription">DESCRIPTION</label>
+                <textarea
+                    id="projectDescription"
+                    maxlength="500"
+                    placeholder="Describe your project..."
+                ></textarea>
+
+                <label for="projectCategory">CATEGORY</label>
+                <input
+                    type="text"
+                    id="projectCategory"
+                    maxlength="30"
+                    placeholder="e.g. DEVELOPMENT"
+                >
+
+                <label for="projectStatus">STATUS</label>
+                <select id="projectStatus">
+                    <option value="planning">PLANNING</option>
+                    <option value="in-progress">IN PROGRESS</option>
+                    <option value="completed">COMPLETED</option>
+                </select>
+
+                <button type="submit" class="primary-btn form-submit">
+                    SAVE PROJECT
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- TASK MODAL -->
+    <div id="taskModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div>
+                    <span class="eyebrow">TASK CONFIGURATION</span>
+                    <h2 id="taskModalTitle">NEW TASK</h2>
+                </div>
+
+                <button
+                    type="button"
+                    id="closeTaskModal"
+                    class="close-btn"
+                >×</button>
+            </div>
+
+            <form id="taskForm">
+
+                <input type="hidden" id="taskProjectId">
+              <input type="hidden" id="taskId">
+
+                <label for="taskName">TASK NAME</label>
+                <input
+                    type="text"
+                    id="taskName"
+                    maxlength="100"
+                    placeholder="Enter task name..."
+                    required
+                >
+
+                <button type="submit" id="taskSubmitBtn" class="primary-btn form-submit">
+                     ADD TASK
+                </button>
+                                  
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/projects.js"></script>
+
+</body>
+</html>
