@@ -1,184 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>LURK3R AI</title>
-
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LURK3R AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/design-system.css">
 </head>
-
 <body>
-
-    <header class="header">
-        <h2>LURK3R <span>AI</span></h2>
-        <p>PERSONAL INTELLIGENCE SYSTEM</p>
-    </header>
-
-    <main class="ai-container">
-
-        <a href="index.html" class="back-link">
-            ← BACK TO STATION
-        </a>
-
-        <section class="ai-welcome">
-            <div class="ai-orb">AI</div>
-
-            <p class="label">SYSTEM ONLINE</p>
-
-            <h1>LURK3R AI</h1>
-
-            <p>Your intelligence. Your system.</p>
-        </section>
-
-        <section class="chat-box">
-
-            <div class="chat-header">
-                <span>CONVERSATION</span>
-                <span class="online">● ONLINE</span>
-
-                <button type="button" id="clearChat" class="clear-chat-button">
-                    CLEAR CHAT
-                </button>
-
-                <button type="button" id="exportChat" class="clear-chat-button">
-                    EXPORT CHAT
-                </button>
-
-                <button type="button" id="newChat" class="clear-chat-button">
-                    NEW CHAT
-                </button>
-            </div>
-
-            <div class="chat-content">
-                <div class="ai-message">
-                    <strong>LURK3R AI</strong>
-                    <p>Welcome to your personal intelligence system. How can I assist you?</p>
-                </div>
-            </div>
-
-            <div class="chat-input">
-                <input
-                    type="text"
-                    placeholder="Message LURK3R AI..."
-                    autocomplete="off"
-                >
-
-                <button type="button">↑</button>
-            </div>
-
-            <p class="api-notice">
-                AI ENGINE: CONNECTING...
-            </p>
-
-        </section>
-
-        <!-- CHAT ARCHIVE -->
-
-
-        <section class="archive-panel">
-
-
-            <div class="archive-header">
-                <div>
-                    <p class="memory-label">LOCAL STORAGE</p>
-                    <h2>CHAT ARCHIVE</h2>
-                </div>
-
-
-                <button
-                    type="button"
-                    id="refreshArchives"
-                    class="memory-refresh"
-                >
-                    ↻
-                </button>
-            </div>
-
-
-            <div class="archive-toolbar">
-                <span id="archiveCount">0 ARCHIVES</span>
-
-
-                <input
-                    type="text"
-                    id="archiveSearch"
-                    placeholder="SEARCH ARCHIVES..."
-                    autocomplete="off"
-                >
-            </div>
-
-
-            <div id="archiveList" class="archive-list">
-                <p class="memory-empty">LOADING ARCHIVES...</p>
-            </div>
-
-
-        </section>
-
-        <!-- MEMORY MANAGEMENT -->
-
-        <section class="memory-panel">
-
-            <div class="memory-header">
-                <div>
-                    <p class="memory-label">LONG-TERM STORAGE</p>
-                    <h2>MEMORY CONTROL</h2>
-                </div>
-
-                <button
-                    type="button"
-                    id="refreshMemories"
-                    class="memory-refresh"
-                >
-                    ↻
-                </button>
-            </div>
-
-            <div class="memory-toolbar">
-
-                <select id="memoryFilter">
-                    <option value="all">ALL CATEGORIES</option>
-                    <option value="project">PROJECTS</option>
-                    <option value="preference">PREFERENCES</option>
-                    <option value="goal">GOALS</option>
-                    <option value="interest">INTERESTS</option>
-                    <option value="general">GENERAL</option>
-                </select>
-
-                <span id="memoryCount">0 RECORDS</span>
-
-            </div>
-
-            <div id="memoryList" class="memory-list">
-                <p class="memory-empty">Loading memories...</p>
-            </div>
-
-            <div class="memory-footer">
-                <button
-                    type="button"
-                    id="clearMemories"
-                    class="memory-clear"
-                >
-                    CLEAR ALL MEMORIES
-                </button>
-            </div>
-
-            <p id="memoryNotice" class="memory-notice">
-                MEMORY SYSTEM: CONNECTING...
-            </p>
-
-        </section>
-
-    </main>
-
-    <footer>
-        LURK3R STATION © 2026
-    </footer>
-
-    <script src="js/script.js"></script>
-
+  <header class="header">
+    <h2>LURK3R <span>AI</span></h2>
+    <p>PERSONAL INTELLIGENCE SYSTEM</p>
+  </header>
+  <main class="ai-container">
+    <a href="index.html" class="back-link">← BACK TO STATION</a>
+    <section class="ai-welcome">
+      <div class="ai-orb">AI</div>
+      <p class="label">SYSTEM ONLINE</p>
+      <h1>LURK3R AI</h1>
+      <p>Your intelligence. Your system.</p>
+    </section>
+    <section class="chat-box">
+      <div class="chat-header">
+        <span>CONVERSATION</span><span class="online">● ONLINE</span>
+        <button type="button" id="clearChat" class="clear-chat-button">CLEAR CHAT</button>
+        <button type="button" id="exportChat" class="clear-chat-button">EXPORT CHAT</button>
+        <button type="button" id="newChat" class="clear-chat-button">NEW CHAT</button>
+      </div>
+      <div class="chat-content">
+        <div class="ai-message"><strong>LURK3R AI</strong><p>Welcome to your personal intelligence system. How can I assist you?</p></div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Message LURK3R AI..." autocomplete="off">
+        <button type="button">↑</button>
+      </div>
+      <p class="api-notice">AI ENGINE: CONNECTING...</p>
+    </section>
+    <section class="archive-panel">
+      <div class="archive-header">
+        <div><p class="memory-label">LOCAL STORAGE</p><h2>CHAT ARCHIVE</h2></div>
+        <button type="button" id="refreshArchives" class="memory-refresh">↻</button>
+      </div>
+      <div class="archive-toolbar">
+        <span id="archiveCount">0 ARCHIVES</span>
+        <input type="text" id="archiveSearch" placeholder="SEARCH ARCHIVES..." autocomplete="off">
+      </div>
+      <div id="archiveList" class="archive-list"><p class="memory-empty">LOADING ARCHIVES...</p></div>
+    </section>
+    <section class="memory-panel">
+      <div class="memory-header">
+        <div><p class="memory-label">LONG-TERM STORAGE</p><h2>MEMORY CONTROL</h2></div>
+        <button type="button" id="refreshMemories" class="memory-refresh">↻</button>
+      </div>
+      <div class="memory-toolbar">
+        <select id="memoryFilter">
+          <option value="all">ALL CATEGORIES</option><option value="project">PROJECTS</option>
+          <option value="preference">PREFERENCES</option><option value="goal">GOALS</option>
+          <option value="interest">INTERESTS</option><option value="general">GENERAL</option>
+        </select>
+        <span id="memoryCount">0 RECORDS</span>
+      </div>
+      <div id="memoryList" class="memory-list"><p class="memory-empty">Loading memories...</p></div>
+      <div class="memory-footer"><button type="button" id="clearMemories" class="memory-clear">CLEAR ALL MEMORIES</button></div>
+      <p id="memoryNotice" class="memory-notice">MEMORY SYSTEM: CONNECTING...</p>
+    </section>
+  </main>
+  <footer>LURK3R STATION © 2026</footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
